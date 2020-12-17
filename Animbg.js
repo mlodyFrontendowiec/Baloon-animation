@@ -2,11 +2,11 @@ class Animbg {
   constructor() {
     this.elements = document.querySelectorAll(".anim-bg");
   }
-  listenCursorMove(event) {
+  listenCursorMove = (event) => {
     const { clientX, clientY } = event;
     this.handleAnimation(clientX, clientY);
-  }
-  handleAnimation(clientX, clientY) {
+  };
+  handleAnimation = (clientX, clientY) => {
     this.elements.forEach((element) => {
       const ratioX = -element.getAttribute("ratioX");
       const ratioY = -element.getAttribute("ratioY");
@@ -21,5 +21,5 @@ class Animbg {
         moveY * ratioY
       }px)`;
     });
-  }
+  };
 }
